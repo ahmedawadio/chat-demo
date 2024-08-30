@@ -18,6 +18,7 @@ import { useEnterSubmit } from '@/lib/hooks/use-enter-submit'
 import { nanoid } from 'nanoid'
 import { useRouter } from 'next/navigation'
 import { IoMdArrowRoundUp } from "react-icons/io";
+import { LuRefreshCw } from "react-icons/lu";
 
 export function PromptForm({
   input,
@@ -78,11 +79,15 @@ export function PromptForm({
               variant="outline"
               size="icon"
               className="absolute top-[14px] size-8 rounded-full bg-background p-0 left-4 "
+              // className="rounded-full xs:px-4"
+
               onClick={() => {
                 router.push('/new')
               }}
             >
-              <IconPlus />
+              {/* <IconPlus /> */}
+              <LuRefreshCw size={18} color="#A1A1AA" />
+
               <span className="sr-only">New Chat</span>
             </Button>
           </TooltipTrigger>
@@ -104,7 +109,7 @@ export function PromptForm({
             value={input}
             onChange={e => setInput(e.target.value)}
           />
-        <div className="absolute right-0 top-[13px]  right-4 ">
+        <div className="absolute  top-[13px]  right-4 ">
           <Tooltip>
             <TooltipTrigger asChild>
               <Button

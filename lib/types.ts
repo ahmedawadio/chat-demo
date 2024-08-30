@@ -39,3 +39,10 @@ export interface User extends Record<string, any> {
   password: string
   salt: string
 }
+
+export enum CommunicationKey {
+  MESSAGE = "message",
+  VOICE = "voice",
+  SMS = "sms",
+  CALL = "call",
+}
