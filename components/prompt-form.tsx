@@ -17,6 +17,7 @@ import {
 import { useEnterSubmit } from '@/lib/hooks/use-enter-submit'
 import { nanoid } from 'nanoid'
 import { useRouter } from 'next/navigation'
+import { IoMdArrowRoundUp } from "react-icons/io";
 
 export function PromptForm({
   input,
@@ -65,14 +66,18 @@ export function PromptForm({
         const responseMessage = await submitUserMessage(value)
         setMessages(currentMessages => [...currentMessages, responseMessage])
       }}
+      // className="px-4 sm:px-8"
     >
-      <div className="relative flex max-h-60 w-full grow flex-col overflow-hidden bg-background px-8 sm:rounded-md sm:border sm:px-12">
+      <div className=" relative flex max-h-60 w-full grow flex-col overflow-hidden bg-background px-8 sm:rounded-full sm:border sm:px-12">
+      <div className="flex items-center space-x-4 px-4"/>
+      <div className="sm:left-72">
+
         <Tooltip>
           <TooltipTrigger asChild>
             <Button
               variant="outline"
               size="icon"
-              className="absolute left-0 top-[14px] size-8 rounded-full bg-background p-0 sm:left-4"
+              className="absolute top-[14px] size-8 rounded-full bg-background p-0 left-4 "
               onClick={() => {
                 router.push('/new')
               }}
@@ -83,27 +88,33 @@ export function PromptForm({
           </TooltipTrigger>
           <TooltipContent>New Chat</TooltipContent>
         </Tooltip>
+      </div>
+
         <Textarea
-          ref={inputRef}
-          tabIndex={0}
-          onKeyDown={onKeyDown}
-          placeholder="Send a message."
-          className="min-h-[60px] w-full resize-none bg-transparent px-4 py-[1.3rem] focus-within:outline-none sm:text-sm"
-          autoFocus
-          spellCheck={false}
-          autoComplete="off"
-          autoCorrect="off"
-          name="message"
-          rows={1}
-          value={input}
-          onChange={e => setInput(e.target.value)}
-        />
-        <div className="absolute right-0 top-[13px] sm:right-4">
+            ref={inputRef}
+            tabIndex={0}
+            onKeyDown={onKeyDown}
+            placeholder="Send a message."
+            className=" min-h-[60px] w-full resize-none bg-transparent sm:px-4  px-8  py-[1.2rem] focus-within:outline-none  rounded-md"  
+            spellCheck={false}
+            autoComplete="off"
+            autoCorrect="off"
+            name="message"
+            rows={1}
+            value={input}
+            onChange={e => setInput(e.target.value)}
+          />
+        <div className="absolute right-0 top-[13px]  right-4 ">
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button type="submit" size="icon" disabled={input === ''}>
-                <IconArrowElbow />
-                <span className="sr-only">Send message</span>
+              <Button
+                type="submit"
+                size="icon"
+                disabled={input === ''}
+                className="rounded-full xs:px-4"
+              >
+                <IoMdArrowRoundUp size={24} />
+                <span className="sr-only xs:px-4">Send message</span>
               </Button>
             </TooltipTrigger>
             <TooltipContent>Send message</TooltipContent>
