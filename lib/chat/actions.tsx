@@ -110,7 +110,7 @@ async function submitUserMessage(content: string, category: CommunicationKey, nu
   'use server'
 
   const aiState = getMutableAIState<typeof AI>()
-  console.log("submitUserMessage", content, category, number)
+  // console.log("submitUserMessage", {content}, {category}, {number})
 
   aiState.update({
     ...aiState.get(),
