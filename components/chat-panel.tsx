@@ -11,6 +11,7 @@ import { useAIState, useActions, useUIState } from 'ai/rsc'
 import type { AI } from '@/lib/chat/actions'
 import { nanoid } from 'nanoid'
 import { UserMessage } from './stocks/message'
+// import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 import { SiConfluence } from 'react-icons/si'
 import { RiCalendarScheduleLine } from 'react-icons/ri'
@@ -104,6 +105,9 @@ export function ChatPanel({
 
   const [selectedCommunicationOption, setSelectedCommunicationOption] = React.useState("message");
   // const [phoneNumber, setPhoneNumber] = React.useState("");
+ 
+
+  
   return (
     // <div className="fixed inset-x-0 bottom-0 w-full bg-gradient-to-b from-muted/30 from-0% to-muted/30 to-90% duration-300 ease-in-out animate-in dark:from-background/10 dark:from-10% dark:to-background/80 peer-[[data-state=open]]:group-[]:lg:pl-[250px] peer-[[data-state=open]]:group-[]:xl:pl-[300px]">
 
@@ -121,10 +125,9 @@ export function ChatPanel({
       <div className="mx-auto sm:max-w-2xl sm:px-4">
      
      
-      {messages.length === 0 && 
+      {/* {messages.length === 0 && 
       
       <>
-       {/* For XS Screens: Render as a Selector */}
        <div className="block sm:hidden mx-2 my-4">
        <div className="relative">
         <select
@@ -140,7 +143,7 @@ export function ChatPanel({
           ))}
         </select>
         <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center pr-3">
-          <FaAngleDown className="text-white" /> {/* White chevron */}
+          <FaAngleDown className="text-white" />
         </div>
       </div>
       </div>
@@ -179,10 +182,9 @@ export function ChatPanel({
      </div>
      ))}
    </div>
-   </>
-
-      }
-        <div className="mb-20 grid grid-cols-2 gap-2 px-2 sm:px-0"
+      </>
+      } */}
+        <div className="mb-5 grid grid-cols-2 gap-2 px-2 sm:px-0"
         id= "mychoices">
           {messages.length === 0 && 
              exampleMessages.map((example, index) => (
@@ -255,7 +257,7 @@ export function ChatPanel({
 
 {
 
-selectedCommunicationOption === "message" && messages.length > 0 &&
+// selectedCommunicationOption === "message" && messages.length > 0 &&
 
         <div className="space-y-4  px-0  sm:rounded-t-xl md:py-4">
           <PromptForm input={input} setInput={setInput} />

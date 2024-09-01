@@ -16,7 +16,7 @@ export const metadata = {
     default: '',
     template: ``
   },
-  description: 'This is an demo of how helpful a virtual agent can be in a clinical setting. You can chat in example scenerios below.',
+  description: 'This is a demo of how helpful a virtual agent can be in a clinical setting. You can chat in example scenerios below.',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',

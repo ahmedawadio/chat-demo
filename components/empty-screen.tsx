@@ -17,7 +17,7 @@ export function EmptyScreen() {
           Welcome to Apollo Clinic!
         </h1>
         <p className="leading-normal text-muted-foreground">
-          This is an demo of how helpful a virtual agent can be in a clinical setting. You can chat in example scenerios below. Built by Ahmed Awad.
+          This is a demo of how helpful a virtual agent can be in a clinical setting. You can chat in example scenerios below. Built by Ahmed Awad.
           
           {/* {' '}
           <ExternalLink href="https://nextjs.org">Next.js</ExternalLink>, the{' '}
