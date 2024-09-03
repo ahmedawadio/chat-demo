@@ -67,7 +67,7 @@ export function ChatPanel({
       heading: 'Medications',
       subheading: 'What should I be taking?',
       icon: <CgPill />,
-      message: `After my knee surgery I was told to take fakeacilin, but I forgot the recommended frequency and if I needed to consume food with the medidication?`
+      message: `After my knee surgery I was told to take fakeacilin, but I forgot the recommended frequency and if I needed to consume food with the medication?`
     },
     // {
     //   heading: 'What are the',
