@@ -61,7 +61,7 @@ export function ChatPanel({
       heading: 'Post Surgery Care',
       subheading: 'What should I do next?',
       icon: <GoTasklist />,
-      message: `I just had my knee surgery. What are things to be mindful of for recovery? I forgot what the Dr Williamson mentioned in the office.`// meet with doctor, pick uo medicine, schedule follow up, stretchign exercises, schedule pt appointment, reduce sodium, show graph ph blood pressure going in the wrong direction
+      message: `I just had my knee surgery. What are things to be mindful of for recovery? I forgot what the Dr. Williamson mentioned in the office.`// meet with doctor, pick uo medicine, schedule follow up, stretchign exercises, schedule pt appointment, reduce sodium, show graph ph blood pressure going in the wrong direction
     },
     {
       heading: 'Medications',
