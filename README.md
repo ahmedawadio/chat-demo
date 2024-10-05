@@ -1,3 +1,22 @@
+# Chat Demo App
+
+Messing around with llms and chatbots.
+
+Find prod on: https://apollo.ahmedawad.io/
+
+Clone from vercel, check out details below:
+
+
+
+
+
+
+
+
+
+
+
+
 <a href="https://chat.vercel.ai/">
   <img alt="Next.js 14 and App Router-ready AI chatbot." src="https://chat.vercel.ai/opengraph-image.png">
   <h1 align="center">Next.js AI Chatbot</h1>
